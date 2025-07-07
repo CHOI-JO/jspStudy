@@ -1,68 +1,61 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="java.util.Date" %> <!-- java 내장된 날짜용 객체를 삽입 -->	
-<!DOCTYPE html>
-<html>
+<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.Date"%>
+<html >
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8"> <%-- UTF-8 메타 태그 추가 --%>
+    <title>환영합니다 - BookMarket</title> <%-- 타이틀 변경 --%>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-	crossorigin="anonymous">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-	crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/style.css"> <%-- style.css 링크 경로 수정 확인 --%>
 
-<title>환영합니다. 책판매 쇼핑몰입니다.....</title>
 </head>
 <body>
+    <a href="https://www.cursors-4u.com/cursor/2010/04/20/cute-spinning-flower-purple.html"
+        target="_blank" title="Cute Spinning Flower Purple">
+        <img src="https://cur.cursors-4u.net/cursor.png" border="0"
+        alt="Cute Spinning Flower Purple"
+        style="position: absolute; top: 0px; right: 0px;" />
+    </a>
+    <br>
 
-	<div class="container py-4">
+	<%@ include file="menu.jsp"%>
 
-		<%@ include file="menu.jsp" %> 
-		<!-- 메뉴바를 외부파일로 연결 -->
-		
-		<%!	String greeting = "Welcome to Book Shopping Mall";
-			String tagline = "환영합니다. 웹 쇼핑몰 입니다. ";%>
+    <div class="container-fixed py-4">
+        <div class="custom-header-box">
+            <h1 class="custom-header-title">도서 쇼핑몰에 오신 것을 환영합니다!</h1> <%-- greeting 변수 대신 직접 텍스트 사용 또는 필요 시 변수 사용 --%>
+            <p class="custom-header-sub">환영합니다, BookMarket에 오신 것을 기쁘게 생각합니다.</p> <%-- tagline 변수 대신 직접 텍스트 사용 --%>
+        </div>
 
-		<div class="p-5 mb-4 bg-body-tertiary rounded-3">
-			<div class="container-fluid py-1">
-				<h1 class="display-5 fw-bold"><%=greeting%></h1>
-				<p class="col-md-8 fs-4">BookMarket</p>
-			</div>
-		</div> <!-- 중간타이틀 : 상단 box -->
-		
-		 <div class="row align-items-md-stretch   text-center">
-	     	<div class="col-md-12">
-				<div class="h-100 p-5">
-			  	   <h3><%=tagline%></h3>
-			  	   <%
-			  	   		Date day = new Date();
-			  	   		String am_pm;	// 오전,오후 출력용
-			  	   		int hour = day.getHours(); // 시간을 가져옴 
-			  	   		int minute = day.getMinutes(); // 분을 가져옴
-			  	   		int second = day.getSeconds(); // 초를 가져옴
-			  	   		if(hour / 12 == 0 ){
-			  	   			am_pm = "오전";
-			  	   		}else {
-			  	   			am_pm = "오후";
-			  	   			hour =  hour - 12; // 오후 20 -> 오후 8
-			  	   		}
-			  	   		String CT = hour + ":" + minute + ":" + second + " " + am_pm;
-			  	   		out.println("현재 접속 시간 : " + CT + "\n");
-			  	   				
-			  	   %>         
-		        </div>
-	    	</div>   
-	   	</div> <!-- 본문영역 : 중간 box --> 
-	   	
-		<%@ include file="footer.jsp" %>
+        <%!String greeting = "도서 쇼핑몰에 오신 것을 환영합니다";
+		String tagline = "Welcome to Web Market!";%>	
+        
+        <div class="row align-items-md-stretch text-center">
+            <div class="col-md-12">
+                <div class="h-100 p-5 content-box"> <%-- content-box 클래스 적용 --%>
+                    <h3 class="welcome-tagline"><%=tagline%></h3> <%-- 태그라인에 클래스 추가 --%>
+                    <%
+                        response.setIntHeader("Refresh", 5);
+                        Date day = new java.util.Date();
+                        String am_pm;
+                        int hour = day.getHours();
+                        int minute = day.getMinutes();
+                        int second = day.getSeconds();
+                        if (hour / 12 == 0) {
+                            am_pm = "AM";
+                        } else {
+                            am_pm = "PM";
+                            hour = hour - 12;
+                        }
+                        String CT = hour + ":" + minute + ":" + second + " " + am_pm;
+                    %>
+                    <p class="current-time">현재 접속 시각: <%=CT%></p> <%-- 시각 표시에도 클래스 추가 --%>
+                </div>
+            </div>
+        </div>
+    </div> <%-- end of container-fixed --%>
 
-	</div>
-
+	<%@ include file="footer.jsp"%>   
 </body>
 </html>

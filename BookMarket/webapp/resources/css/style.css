@@ -1,0 +1,753 @@
+* {
+	cursor: url(https://cur.cursors-4u.net/nature/nat-9/nat850.ani),
+		url(https://cur.cursors-4u.net/nature/nat-9/nat850.png), auto !important;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(135deg, #fff2f2 0%, #fffaf5 100%);
+	font-family: 'KoPub Batang', serif;
+	color: #5b3a29;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+@font-face {
+	font-family: 'KoPub Batang';
+	src:
+		url('https://cdn.jsdelivr.net/gh/hyosangkim67/personal@master/KoPubWorld-Batang-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.side-column {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 250px;
+}
+
+.nav-bar {
+	font-family: 'Pretendard', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1150px;
+	margin: 10px auto;
+	padding: 10px 20px;
+	border-radius: 20px;
+	background: rgba(255, 243, 235, 0.8);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 6px 18px rgba(160, 120, 90, 0.1);
+	box-sizing: border-box;
+}
+
+.nav-title {
+	color: #804d36;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.nav-btn {
+	display: flex;
+	gap: 20px;
+	font-size: 14px;
+}
+
+.nav-btn-item a {
+	text-decoration: none;
+	color: #c17086;
+	font-weight: 500;
+	padding: 6px 12px;
+	border-radius: 12px;
+	transition: background 0.2s ease;
+}
+
+.nav-btn-item a:hover {
+	background: rgba(250, 210, 230, 0.2);
+}
+
+.layout {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	max-width: 1200px;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.login-box {
+	width: 250px;
+	font-size: 14px;
+	background: rgba(255, 245, 235, 0.8);
+	backdrop-filter: blur(12px);
+	border-radius: 20px;
+	padding: 30px;
+	box-shadow: 0 8px 24px rgba(160, 120, 90, 0.15);
+	transition: all 0.3s ease;
+	height: 480px;
+}
+
+.box-card {
+	background-color: #fffefc;
+	border-radius: 16px;
+	padding: 40px;
+	box-shadow: 0 2px 10px rgba(160, 120, 90, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.content-box {
+	flex: 1;
+	min-width: 0;
+	font-size: 16px;
+	line-height: 1.9;
+	letter-spacing: -1.08px;
+	background: linear-gradient(to bottom right, #fffaf5, #fdf7f2);
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15);
+	position: relative;
+}
+
+.credit-box img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 20px;
+	display: block;
+	margin: 0 auto;
+}
+
+.styled-table {
+	border-collapse: collapse;
+	width: 100%;
+	font-family: 'KoPub Batang', serif;
+	font-size: 15px;
+	color: #333;
+	border: 1px solid #e0cfc2;
+	margin-top: 20px;
+	background-color: #fffefc;
+	box-shadow: 0 2px 8px rgba(160, 120, 90, 0.15);
+}
+
+.styled-table caption {
+	caption-side: top;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+	padding: 14px;
+	border: 1px solid #f7e6de;
+	text-align: center;
+}
+
+.styled-table thead {
+	background-color: #fff2e8;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #fff8f5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #e7a6b6, #f0c4d8);
+	border-radius: 10px;
+	border: 2px solid #fff8f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #d986a5, #e7a6b6);
+}
+
+.shortcut-menu {
+	padding: 30px;
+}
+
+.shortcut-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.shortcut-list li {
+	margin-bottom: 12px;
+}
+
+.shortcut-list a {
+	display: block;
+	padding: 10px 16px;
+	background-color: #fff7f5;
+	border-radius: 12px;
+	color: #a66b76;
+	font-family: 'Pretendard', sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	box-shadow: 0 2px 6px rgba(160, 120, 90, 0.15);
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shortcut-list a:hover {
+	background-color: #ffeef1;
+	transform: translateY(-2px);
+}
+
+.carousel-item img {
+	height: 300px;
+	object-fit: cover;
+}
+
+.fade-in-box {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-box.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.elegant-cute-button {
+	background: linear-gradient(to right, #f9e3e3, #fbe9e9);
+	color: #804d36;
+	font-family: 'Pretendard', sans-serif;
+	border: 1px solid #f2d0d0;
+	border-radius: 14px;
+	padding: 10px 18px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 3px 8px rgba(160, 120, 90, 0.1);
+}
+
+.elegant-cute-button:hover {
+	background: linear-gradient(to right, #f7d9e0, #ffe8eb);
+	color: #c17086;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(160, 120, 90, 0.15);
+}
+
+.container-fixed {
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.custom-header-box {
+	background: linear-gradient(to left, #fff6f6, #fffdfb);
+	border-radius: 20px;
+	padding: 40px 30px;
+	box-shadow: 0 6px 16px rgba(160, 120, 90, 0.1);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.custom-header-title {
+	font-size: 32px;
+	font-family: 'Pretendard', sans-serif;
+	color: #804d36;
+	margin-bottom: 10px;
+}
+
+.custom-header-sub {
+	font-size: 16px;
+	font-family: 'Pretendard', sans-serif;
+	color: #aa7b6f;
+}
+
+@media (max-width : 768px) {
+	.layout {
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	.login-box,
+	.content-box {
+		width: 100%;
+	}
+}
+
+footer {
+	font-family: 'Pretendard', sans-serif;
+	margin: 20px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #aa8a78;
+}
+
+/* style.css 파일의 맨 마지막에 추가 */
+
+.book-item-card {
+    background-color: #fffefc; /* box-card와 비슷한 배경색 */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(160, 120, 90, 0.1); /* 그림자 효과 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 효과 */
+    height: 100%; /* 모든 카드의 높이를 동일하게 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내용 분산 정렬 */
+    align-items: center; /* 중앙 정렬 */
+}
+
+.book-item-card:hover {
+    transform: translateY(-5px); /* 호버 시 살짝 위로 */
+    box-shadow: 0 8px 20px rgba(160, 120, 90, 0.2); /* 호버 시 그림자 강조 */
+}
+
+.book-item-card img {
+    margin-bottom: 15px; /* 이미지 아래 간격 */
+}
+
+.book-item-card h5 {
+    color: #804d36; /* 제목 색상 */
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700; /* 더 두껍게 */
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.book-item-card p {
+    font-family: 'Pretendard', sans-serif;
+    color: #5b3a29; /* 본문 색상 */
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.book-item-card .book-description {
+    font-size: 0.85em;
+    color: #7b6a5d;
+    margin-bottom: 15px;
+    height: 4em; /* 설명을 위한 고정 높이 */
+    overflow: hidden; /* 넘치는 내용은 숨김 */
+    text-overflow: ellipsis; /* ... 표시 */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 3줄까지 표시 */
+    -webkit-box-orient: vertical;
+}
+
+/* elegant-cute-button은 style.css에 이미 정의되어 있습니다. */
+/* 필요하다면 추가적으로 버튼의 margin-top 등을 조절할 수 있습니다. */
+.book-item-card .elegant-cute-button {
+    margin-top: auto; /* 버튼을 항상 하단에 배치 */
+}
+
+.book-detail-card {
+    /* content-box의 스타일을 따르면서 상세 정보 카드에만 적용되는 추가 스타일 */
+    background-color: #fffefc; /* 배경색 */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15); /* 그림자 */
+    display: flex;
+    flex-direction: column; /* 내용 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center; /* 전체 텍스트 가운데 정렬 */
+}
+
+.book-detail-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0cfc2; /* 이미지 테두리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 이미지 그림자 */
+    margin-bottom: 25px; /* 이미지 아래 여백 */
+}
+
+.book-info-section {
+    padding-left: 30px; /* 이미지와의 간격 */
+    text-align: left !important; /* 이 섹션 내의 텍스트는 다시 왼쪽 정렬 */
+    font-family: 'Pretendard', sans-serif;
+    color: #5b3a29;
+}
+
+.book-name-title {
+    font-size: 2.2em; /* 제목 크기 */
+    color: #804d36; /* 제목 색상 */
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f2e2d8; /* 제목 아래 구분선 */
+    padding-bottom: 10px;
+}
+
+.book-description-full {
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #6a4a38;
+}
+
+.book-detail-badge {
+    background-color: #f0c4d8; /* 뱃지 배경색 */
+    color: #804d36; /* 뱃지 텍스트색 */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: inline-block; /* 텍스트 라인에 맞추기 */
+    margin-left: 5px;
+}
+
+.book-info-section p {
+    margin-bottom: 10px; /* 각 정보 항목 간격 */
+    font-size: 0.95em;
+}
+
+.book-info-section p b {
+    color: #804d36; /* '저자', '출판사' 등의 볼드 텍스트 색상 */
+}
+
+.book-price {
+    font-size: 2em; /* 가격 글자 크기 */
+    color: #c17086; /* 가격 색상 */
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* 버튼 간 간격 */
+    flex-wrap: wrap; /* 버튼이 많으면 다음 줄로 넘어가도록 */
+    justify-content: flex-start; /* 버튼 왼쪽 정렬 */
+}
+
+
+.welcome-tagline {
+    font-size: 1.8em;
+    color: #804d36;
+    font-family: 'Pretendard', sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.current-time {
+    font-size: 1.1em;
+    color: #a66b76;
+    font-family: 'Pretendard', sans-serif;
+    margin-top: 15px;
+}
+
+
+.styled-badge {
+    background-color: #f0c4d8 !important; /* 뱃지 배경색, Bootstrap 오버라이드를 위해 !important 사용 */
+    color: #804d36 !important; /* 뱃지 텍스트색 */
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    transition: background-color 0.2s ease;
+}
+
+.styled-badge:hover {
+    background-color: #e7a6b6 !important; /* 호버 시 색상 변경 */
+}
+
+/* 추가적으로 테이블 셀 정렬이 필요한 경우 */
+.styled-table th,
+.styled-table td {
+    vertical-align: middle; /* 테이블 셀 내용 수직 중앙 정렬 */
+}
+
+
+.shipping-form {
+    max-width: 700px; /* 폼의 최대 너비 설정 (중앙 정렬) */
+    margin: 0 auto; /* 폼 중앙 정렬 */
+    padding: 20px;
+    background-color: #fffaf5; /* 폼 배경색 (content-box와 비슷하게) */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(160, 120, 90, 0.1);
+}
+
+.form-group-custom {
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 라벨과 인풋 필드 수직 중앙 정렬 */
+    margin-bottom: 18px; /* 그룹 간격 */
+}
+
+.form-group-custom label {
+    font-family: 'Pretendard', sans-serif;
+    color: #804d36;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.elegant-input {
+    border: 1px solid #f2d0d0; /* 테두리 색상 */
+    border-radius: 10px; /* 입력 필드 둥글게 */
+    padding: 10px 15px;
+    font-family: 'Pretendard', sans-serif;
+    color: #5b3a29;
+    background-color: #fffefc; /* 입력 필드 배경색 */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* 내부 그림자 */
+    transition: all 0.3s ease;
+}
+
+.elegant-input:focus {
+    border-color: #e7a6b6; /* 포커스 시 테두리 색상 */
+    box-shadow: 0 0 0 0.25rem rgba(240, 196, 216, 0.25); /* 포커스 시 그림자 효과 */
+    outline: none;
+}
+
+/* 폼 내의 버튼 그룹 정렬을 위해 수정 */
+.shipping-form .button-group {
+    justify-content: center; /* 폼 내 버튼 그룹 중앙 정렬 */
+    margin-top: 30px; /* 상단 여백 */
+}
+
+
+.order-receipt-title {
+    font-family: 'Pretendard', sans-serif;
+    color: #804d36;
+    font-weight: bold;
+    font-size: 2.5em;
+    border-bottom: 2px solid #f2e2d8;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.order-info-section {
+    background-color: #fffaf5; /* 정보 섹션 배경 */
+    border: 1px solid #f2d0d0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(160, 120, 90, 0.08);
+}
+
+.order-info-heading {
+    font-family: 'Pretendard', sans-serif;
+    color: #c17086; /* 헤딩 색상 */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #f5e4df;
+    padding-bottom: 8px;
+}
+
+.order-info-section p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.95em;
+    color: #5b3a29;
+    margin-bottom: 8px;
+}
+
+.order-info-section p strong {
+    color: #804d36; /* 볼드 텍스트 색상 */
+    margin-right: 5px;
+}
+
+.order-info-section em {
+    font-style: normal;
+    color: #a66b76; /* 날짜 등 강조 텍스트 색상 */
+    font-weight: 500;
+}
+
+.styled-table .book-name-col {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    color: #5b3a29;
+}
+
+.styled-table .total-label {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #804d36;
+}
+
+.styled-table .total-price {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #c17086 !important; /* 총액 색상 강조 */
+}
+
+.button-group {
+    justify-content: center;
+} 
+
+
+.thank-you-message-box {
+    background-color: #fffaf5; /* 배경색 */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15);
+    text-align: center; /* 전체 내용 중앙 정렬 */
+}
+
+.thank-you-heading {
+    font-family: 'Pretendard', sans-serif;
+    color: #c17086; /* 강조 색상 */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.order-detail-text {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.2em;
+    color: #5b3a29;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    color: #804d36; /* 강조 텍스트 색상 */
+    font-weight: bold;
+}
+
+
+.login-form-box {
+    max-width: 450px; /* 로그인 폼 박스의 최대 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    background-color: #fffaf5; /* 배경색 */
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15);
+    text-align: center; /* 내부 텍스트 중앙 정렬 */
+}
+
+.login-heading {
+    font-family: 'Pretendard', sans-serif;
+    color: #804d36;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.login-error-message {
+    background-color: #fbeef3 !important; /* 오류 메시지 배경색 */
+    color: #c17086 !important; /* 오류 메시지 텍스트색 */
+    border-color: #f2d0d0 !important; /* 오류 메시지 테두리색 */
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 25px; /* 하단 여백 */
+}
+
+/* 폼 요소의 라벨, 인풋 스타일은 이미 .elegant-input에서 처리됩니다. */
+
+/* 로그인 버튼 스타일 */
+.login-form .login-button {
+    width: 100%; /* 버튼 너비를 폼에 맞게 꽉 채움 */
+    padding: 12px 0; /* 패딩 조정 */
+    font-size: 1.1em; /* 폰트 크기 조정 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+/* form-floating의 label이 input 위로 올라가는 기본 동작을 유지 */
+.form-floating > .form-control:focus~label,
+.form-floating > .form-control:not(:placeholder-shown)~label,
+.form-floating > .form-select~label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    color: #a66b76; /* 라벨 포커스/입력 시 색상 */
+}
+
+
+.language-selector a {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.9em;
+    color: #a66b76 !important; /* 색상 강조 */
+    transition: color 0.2s ease;
+}
+
+.language-selector a:hover {
+    color: #c17086 !important;
+}
+
+/* 폼 라벨 및 입력 필드는 addMember.jsp와 동일한 스타일 사용 (elegant-input) */
+.form-check-label {
+    /* addMember.jsp와 동일하게 라디오/체크박스 라벨 스타일 */
+    font-family: 'Pretendard', sans-serif;
+    color: #5b3a29;
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+.form-control.elegant-input-file {
+    /* 파일 입력 필드만을 위한 특정 스타일 */
+    padding-top: 8px; /* 파일 선택 버튼과의 정렬을 위해 패딩 조정 */
+    padding-bottom: 8px;
+    height: auto; /* 높이 자동 조절 */
+    cursor: pointer;
+}
+
+
+.book-detail-image-thumb {
+    max-width: 180px; /* 이미지 썸네일 크기 조정 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* 이미지 아래 여백 */
+}
+
+
+.cancelled-message-box {
+    background-color: #fffaf5; /* 배경색 */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15);
+    text-align: center; /* 전체 내용 중앙 정렬 */
+}
+
+.cancelled-heading {
+    font-family: 'Pretendard', sans-serif;
+    color: #c17086; /* 강조 색상 */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.cancelled-detail-text { /* 이 부분이 이전 답변에서 잘린 부분입니다. */
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.2em;
+    color: #5b3a29;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.error-message-box {
+    background-color: #fffaf5; /* 배경색 */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(160, 120, 90, 0.15);
+    text-align: center; /* 전체 내용 중앙 정렬 */
+}
+
+.error-heading {
+    font-family: 'Pretendard', sans-serif;
+    color: #c17086; /* 강조 색상 */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.error-detail-text {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.1em;
+    color: #5b3a29;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    word-break: break-all; /* 긴 URL이 넘어갈 때 줄바꿈 */
+}
